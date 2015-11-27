@@ -1,0 +1,95 @@
+/**
+* @author      OA Wu <comdan66@gmail.com>
+* @copyright   Copyright (c) 2015 OA Wu Design
+*/
+
+@mixin search-form () {
+  $mediaTabletWidth: 1200px;
+  $mediaMobileWidth: 900px;
+  $buttonWidth: 80px;
+  $submitWidth: 80px;
+  @include clearfix();
+
+      display: block;
+
+  .l, .submit, .button {
+    display: inline-block;
+    float: left;
+    width: calc(100% / 3);
+  }
+  .l {
+    width: calc(100% - #{$buttonWidth + $submitWidth + 10px});
+    &.b1 {
+      width: calc(100% - #{$buttonWidth});
+    }
+    &.b3 {
+      width: calc(100% - #{$buttonWidth + $submitWidth + $submitWidth + 20px});
+    }
+    @media screen and (min-width: 0px) and (max-width: #{$mediaMobileWidth - 1px}) {
+      width: 100%;
+    }
+    text-align: left;
+
+    input, select {
+      float: left;
+      @include clearfix();
+      @include input();
+      margin: 0;
+
+      @media screen and (min-width: 0px) and (max-width: #{$mediaMobileWidth - 1px}) {
+        width: 100%;
+        &:not(:first-child) {
+          margin-top: 5px;
+        }
+      }
+    }
+    select {
+      height: 34px;
+    }
+    @for $i from 2 through 10 {
+      &.i#{$i} {
+        input, select {
+          @media screen and (min-width: $mediaMobileWidth) and (max-width: #{$mediaTabletWidth - 1px}) {
+            width: calc((100% / #{ceil($i / 2)}) - 7px);
+            &:not(:nth-child(#{ceil($i / 2)}n + 1)) {
+              margin-left: 5px;
+            }
+            &:not(:nth-child(-n + #{ceil($i / 2)})) {
+              margin-top: 5px;
+            }
+          }
+          @media screen and (min-width: #{1200px}) {
+            width: calc((100% / #{$i}) - 7px);
+            &:not(:nth-child(#{$i}n + 1)) {
+              margin-left: 5px;
+            }
+            &:not(:nth-child(-n + #{$i})) {
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .button {
+    width: $buttonWidth;
+    @include button('blue');
+    margin-top: 2px;
+    margin-left: 10px;
+    @media screen and (min-width: 0px) and (max-width: #{$mediaMobileWidth - 1px}) {
+      width: 100%;
+      margin-top: 5px;
+      margin-left: 0;
+    }
+  }
+  .submit {
+    width: $submitWidth;
+    @include button('blue-gray');
+    margin-top: 2px;
+    @media screen and (min-width: 0px) and (max-width: #{$mediaMobileWidth - 1px}) {
+      width: 100%;
+      margin-top: 5px;
+      margin-left: 0;
+    }
+  }
+}

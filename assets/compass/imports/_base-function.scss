@@ -1,0 +1,89 @@
+/**
+ * @author      OA Wu <comdan66@gmail.com>
+ * @copyright   Copyright (c) 2015 OA Wu Design
+ */
+
+@import "functions/_base-input";
+@import "functions/_base-button";
+@import "functions/_base-hyperlink";
+@import "functions/_base-alert";
+@import "functions/_base-load";
+@import "functions/_base-table";
+@import "functions/_base-textarea";
+@import "functions/_base-paper";
+@import "functions/_base-checkbox";
+@import "functions/_base-radio";
+@import "functions/_base-icon";
+@import "functions/_base-form";
+@import "functions/_base-pagination";
+
+@mixin font-smoothing ($val: antialiased) {
+  -moz-osx-font-smoothing: $val;
+   -webkit-font-smoothing: $val;
+      -moz-font-smoothing: $val;
+       -ms-font-smoothing: $val;
+        -o-font-smoothing: $val;
+}
+
+@mixin clearfix () {
+  *zoom: 1;
+
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+    clear: both;
+  }
+}
+
+@mixin svg-color ($color: rgba(255, 255, 255, 1), $hoverColor: rgba(0, 0, 0, 1), $transition: all .3s) {
+  &, * {
+    color: $color;
+    fill: $color;
+    @include transition($transition);
+  }
+  &:hover {
+    &, * {
+      color: $hoverColor;
+      fill: $hoverColor;
+    }
+  }
+}
+@mixin split ($leftName: '.l', $rightName: '.r') {
+  @include clearfix();
+
+  #{$leftName}, #{$rightName} {
+    float: left;
+    position: relative;
+    display: inline-block;
+  }
+  #{$rightName} {
+    float: right;
+  }
+}
+@mixin split-left ($leftWidth: 100px, $leftName: '.l', $rightName: '.r') {
+  @include split($leftName, $rightName);
+
+  #{$leftName} {
+    width: $leftWidth;
+  }
+  #{$rightName} {
+    width: calc(100% - #{$leftWidth});
+  }
+}
+@mixin split-right ($rightWidth: 100px, $leftName: '.l', $rightName: '.r') {
+  @include split($leftName, $rightName);
+
+  #{$leftName} {
+    width: calc(100% - #{$rightWidth});
+  }
+  #{$rightName} {
+    width: $rightWidth;
+  }
+}
+
+@mixin overflow-docx3 () {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
