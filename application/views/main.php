@@ -34,6 +34,15 @@
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&language=zh-TW&libraries=places" language="javascript" type="text/javascript"></script>
         <script src="/assets/js/jquery_v1.10.2/jquery-1.10.2.min.js" language="javascript" type="text/javascript" ></script>
         <script src="/assets/js/main.js?v=1" language="javascript" type="text/javascript" ></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-46121102-20', 'auto');
+            ga('send', 'pageview');
+        </script>
     </head>
     <body lang="zh-tw">
         <div class='map'>
