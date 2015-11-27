@@ -33,7 +33,7 @@
         <link href="/assets/css/main.css" rel="stylesheet" type="text/css" />
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&language=zh-TW&libraries=places" language="javascript" type="text/javascript"></script>
         <script src="/assets/js/jquery_v1.10.2/jquery-1.10.2.min.js" language="javascript" type="text/javascript" ></script>
-        <script src="/assets/js/main.js" language="javascript" type="text/javascript" ></script>
+        <script src="/assets/js/main.js?v=1" language="javascript" type="text/javascript" ></script>
     </head>
     <body lang="zh-tw">
         <div class='map'>
