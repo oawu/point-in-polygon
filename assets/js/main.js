@@ -144,7 +144,6 @@ $(function () {
             _points[i].polyline.nextMarker = _points[i];
             _points[i].polyline.drawPath ();
         }
-        loadMarkers ();
     }
 
     function initPoints (position, index) {
@@ -176,6 +175,7 @@ $(function () {
         });
 
         google.maps.event.addListener (marker, 'drag', setPolyline);
+        google.maps.event.addListener (marker, 'dragend', loadMarkers);
 
         google.maps.event.addListener (marker, 'rightclick', function (e) {
             var pixel = marker.getPixelPosition ();
@@ -184,6 +184,7 @@ $(function () {
         _points.splice (index ? index : _points.length, 0, marker);
 
         setPolyline ();
+        loadMarkers ();
     }
 
     function initialize () {
