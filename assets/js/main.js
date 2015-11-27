@@ -188,7 +188,7 @@ $(function () {
 
     function initialize () {
         _map = new google.maps.Map ($map.get (0), {
-            zoom: 16,
+            zoom: 14,
             zoomControl: true,
             scrollwheel: true,
             scaleControl: true,
