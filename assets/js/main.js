@@ -219,6 +219,7 @@ $(function () {
             if ($markerMenu.marker.polyline)
                 $markerMenu.marker.polyline.setMap (null);
             setPolyline ();
+            loadMarkers ();
             hideMenu ();
         });
 
