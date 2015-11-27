@@ -59,5 +59,6 @@
         <a href="https://github.com/comdan66/point-in-polygon" target="_blank">GitHub</a>
         <a href="http://www.ioa.tw/" target="_blank">作者</a>
         <a href="http://comdan66.github.io/" target="_blank">更多作品</a>
+        <span>請按右鍵，新增三個點！</span>
     </body>
 </html>

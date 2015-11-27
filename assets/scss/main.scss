@@ -46,6 +46,21 @@ html {
                 top: 70px;
             }
         }
+        > span {
+            position: absolute;
+            bottom: 10px;
+            left: calc(50% - 100px);
+            display: inline-block;
+            width: 200px;
+            padding: 10px 5px;
+            border: 1px solid rgba(39, 40, 34, .4);
+            background-color: rgba(255, 255, 255, 1);
+            color: rgba(39, 39, 34, 1);
+            font-weight: bold;
+            @include border-radius(2px);
+            @include transition(all .3s);
+            @include box-shadow(0 0 15px 1px rgba(0, 0, 0, 0.2));
+        }
     }
 }
 
