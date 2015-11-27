@@ -25,7 +25,7 @@
         <meta property="og:locale:alternate" content="en_US" />
 
         <meta property="og:type" content="city" />
-        <meta property="og:image" content="/assets/img/og.png" alt="OA's point in polygon demo!" />
+        <meta property="og:image" content="http://polygon.ioa.tw/assets/img/og.png" alt="OA's point in polygon demo!" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
