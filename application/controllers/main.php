@@ -40,9 +40,10 @@ class Main extends CI_Controller {
 		$markers = $this->marker_model->get_by_bounds ($northEast, $southWest);
 
 		// Filter markers by polygon
-		$markers = array_splice (array_filter ($markers, function ($marker) use ($polygon) {
+		$markers = array_filter ($markers, function ($marker) use ($polygon) {
 					return is_in_polygon ($marker, $polygon);
-				}), 0);
+				});
+		$markers = array_splice ($markers, 0);
 
 		// Output markers json
 		return $this->output->set_content_type ('application/json')
