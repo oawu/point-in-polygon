@@ -6,16 +6,13 @@
 
 ![OA's point in polygon demo](assets/img/demo.gif)
 
-<br/>
 ## 聲明
 本作品授權採用 姓名標示-非商業性 2.0 台灣 (CC BY-NC 2.0 TW) 授權，詳見 [http://creativecommons.org/licenses/by-nc/2.0/tw/](http://creativecommons.org/licenses/by-nc/2.0/tw/)
 
 
-<br/>
 ## 簡介
 * 就是一個多邊形，拉出範圍，選出範圍內的項目。
 
-<br/>
 ## 安裝
 * hosts 設定一個 domain
 * vhost 將該 domain 指向專案
@@ -25,7 +22,6 @@
 * 開啟 domain，即可看到功能，對地圖點選右鍵即可新增節點，三個節點以上才能透過 **Ajax** 撈取項目
 
 
-<br/>
 ## 關於
 * 作者名稱 - [OA Wu](http://www.ioa.tw/)
 
